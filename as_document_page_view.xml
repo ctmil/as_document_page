@@ -2,64 +2,29 @@
 <openerp>
         <data>
 
-	<record id="assets_tree_view_as_mro" model="ir.ui.view">
-	    <field name="name">asset.asset.tree.as.mro</field>
-            <field name="model">asset.asset</field>
-	    <field name="inherit_id" ref="asset.assets_tree_view" />
+	<record id="view_wiki_tree_as_doc" model="ir.ui.view">
+	    <field name="name">view.wiki.tree.as.doc</field>
+            <field name="model">document.page</field>
+	    <field name="inherit_id" ref="document_page.view_wiki_tree" />
             <field name="arch" type="xml">
-                <field name="user_id" position="after">
+                <field name="parent_id" position="after">
 			<field name="company_id" />
 		</field>	
             </field>
         </record>
 
         <!-- Asset Form View  -->
-        <record id="assets_form_view_as_mro" model="ir.ui.view">
-            <field name="name">asset.asset.form.as.mro</field>
-            <field name="model">asset.asset</field>
-	    <field name="inherit_id" ref="asset.assets_form_view" />
+        <record id="view_wiki_form_as_doc" model="ir.ui.view">
+            <field name="name">view.wiki.form.as.doc</field>
+            <field name="model">document.page</field>
+	    <field name="inherit_id" ref="document_page.view_wiki_form" />
             <field name="arch" type="xml">
-		<field name="property_stock_asset" position="after">
-			<field name="company_id" readonly="1"/>
-		</field>
+                <field name="parent_id" position="after">
+			<field name="company_id" />
+		</field>	
 	    </field>
 	</record>
 
-        <!-- Maintenance request menu -->
-        <record id="mro_request_tree_view_as_mro" model="ir.ui.view">
-            <field name="name">mro.request.tree.as.mro</field>
-            <field name="model">mro.request</field>
-	    <field name="inherit_id" ref="mro.mro_request_tree_view" />
-            <field name="arch" type="xml">
-		<field name="state" position="after">
-			<field name="company_id" />
-		</field>
-	    </field>		
-	</record>
-
-        <!-- Maintenance request menu -->
-        <record id="mro_request_form_view_as_mro" model="ir.ui.view">
-            <field name="name">mro.request.form.as.mro</field>
-            <field name="model">mro.request</field>
-	    <field name="inherit_id" ref="mro.mro_request_form_view" />
-            <field name="arch" type="xml">
-		<field name="asset_id" position="after">
-			<field name="company_id" readonly="1" />
-		</field>
-	    </field>		
-	</record>
-
-        <!-- Maintenance order menu -->
-        <record id="mro_order_tree_view_as_mro" model="ir.ui.view">
-            <field name="name">mro.order.tree.as.mro</field>
-            <field name="model">mro.order</field>
-	    <field name="inherit_id" ref="mro.mro_order_tree_view" />
-            <field name="arch" type="xml">
-		<field name="origin" position="after">
-			<field name="company_id" />
-		</field>
-	    </field>
-	</record>
 
 	</data>
 </openerp>
