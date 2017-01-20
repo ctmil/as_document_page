@@ -24,7 +24,7 @@
     "init_xml": [],
     "data": [
 	'as_document_page_view.xml',
-	'security/as_security_view.xml',
+	'security/document_security.xml',
     ],
     'demo_xml': [
     ],
