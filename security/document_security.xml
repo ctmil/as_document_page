@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="0">
+
+        <!-- Sale Portal Access Rules -->
+        <record id="document_page_multicompany_rule" model="ir.rule">
+            <field name="name">Document Page</field>
+            <field name="model_id" ref="document_page.model_document_page"/>
+            <field name="domain_force">[('company_id','in',user.company_ids.ids)]</field>
+            <field eval="1" name="perm_unlink"/>
+            <field eval="1" name="perm_write"/>
+            <field eval="1" name="perm_read"/>
+            <field eval="0" name="perm_create"/>
+        </record>
+
+    </data>
+</openerp>

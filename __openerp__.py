@@ -23,7 +23,8 @@
     "depends": ["base","document_page"],
     "init_xml": [],
     "data": [
-	'as_document_page_view.xml'
+	'as_document_page_view.xml',
+	'security/as_security_view.xml',
     ],
     'demo_xml': [
     ],
